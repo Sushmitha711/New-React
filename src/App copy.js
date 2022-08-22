@@ -3,6 +3,7 @@ import User from "./User/User"
 import Navbar from "./Components/Navbar/Navbar"
 import Home from "./User/Home";
 import Services from "./User/Services";
+import axios from "axios";
 import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
 class App extends React.Component{
 
