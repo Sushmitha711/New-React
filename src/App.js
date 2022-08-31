@@ -4,6 +4,8 @@ import { Provider } from 'react-redux'
 import { store } from './redux2/store'
 import Navbar from './Navbar/Navbar'
 import Message from './Message/Message'
+import Product from "./Product/product"
+import User from './User/User'
 import {BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 const App = () => {
     return (
@@ -11,8 +13,11 @@ const App = () => {
             <Router>
             <Navbar/>
             <Routes>
-                <Route path="/Counter" element={<Counter/>}/>
+            
                 <Route path="/Message" element={<Message/>}/>
+                <Route path="/Counter" element={<Counter/>}/>
+                <Route path="/product" element={<Product/>}/>
+                <Route path="/User" element={<User/>}/>
             </Routes>
             </Router>
             

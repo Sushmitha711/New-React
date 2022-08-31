@@ -1,11 +1,11 @@
-const CHANGE="CHANGE"
-const UPDATE='UPDATE'
-
-let changeAction=()=>{
-   return {type:CHANGE}
-   //console.log("hello test 1")
+const GM = "GM"
+const GN = 'GN'
+//actions
+let gmAction = () => {
+    //console.log("Breakfast - gm Action")
+    return { type: GM }
 }
-let updateAction=()=>{
-    return {type:UPDATE}
+let gnAction = () => {
+    return { type: GN}
 }
-export {CHANGE,UPDATE,changeAction,updateAction}
+export { GM, GN, gmAction, gnAction }
