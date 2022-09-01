@@ -1,11 +1,13 @@
-const GM = "GM"
+
+const GM = 'GM'
 const GN = 'GN'
 //actions
 let gmAction = () => {
-    //console.log("Breakfast - gm Action")
-    return { type: GM }
+       return { type: GM }
 }
 let gnAction = () => {
-    return { type: GN}
+    return {
+        type: GN
+    }
 }
-export { GM, GN, gmAction, gnAction }
+export { GN, GM, gmAction, gnAction }

@@ -7,12 +7,11 @@ let initialState={
     P_Qty:1,
 }
 
-const ProductReducer = (state=initialState,action) => {
+const productReducer = (state=initialState,action) => {
   switch(action.type){
     case 'INCR':
         return{
-        ...state,
-         P_Qty:state.P_Qty+1
+        ...state, P_Qty:state.P_Qty+1
         }
     case 'DECR':
         return {
@@ -24,4 +23,4 @@ const ProductReducer = (state=initialState,action) => {
   } 
 }
 
-export {ProductReducer} ;
+export {productReducer} ;

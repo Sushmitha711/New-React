@@ -27,7 +27,7 @@ let products=useSelector((state)=>{
                         <tbody>
                             <tr>
                                 <td>{products.P_Name}</td>
-                                 <td>{<img src={product.P_Image}/>}</td> 
+                                 <td>{<img src={products.P_Image}/>}</td> 
                                 <td>{products.P_Price}</td>
                                 <td><i className='fa fa-plus-circle' onClick={()=>{dispatch(incrAction())}}></i>{products.P_Qty}<i className='fa fa-minus-circle' onClick={dispatch(decrAction())}></i></td>
                                 <td>{products.P_Qty*products.P_Price}</td>

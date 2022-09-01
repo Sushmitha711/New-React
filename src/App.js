@@ -9,6 +9,7 @@ import User from './User/User'
 import {BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 const App = () => {
     return (
+        <>
         <Provider store={store} >
             <Router>
             <Navbar/>
@@ -17,11 +18,12 @@ const App = () => {
                 <Route path="/Message" element={<Message/>}/>
                 <Route path="/Counter" element={<Counter/>}/>
                 <Route path="/product" element={<Product/>}/>
-                <Route path="/User" element={<User/>}/>
+                <Route path="/User" element={<User/>}/> 
             </Routes>
             </Router>
             
         </Provider>
+        </>
     )
 }
 

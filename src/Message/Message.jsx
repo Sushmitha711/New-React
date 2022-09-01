@@ -1,24 +1,20 @@
 import React from 'react'
-import { useDispatch,useSelector } from 'react-redux'
 import { gmAction, gnAction } from '../redux2/Message/message.action'
+import { useDispatch, useSelector } from 'react-redux'
 const Message = () => {
-    let y = useSelector((state) => {
-       // return state.message;
-        console.log(state.message)
+    let x = useSelector((state) => {
+        return state.msg;
     })
-    let dispatch = useDispatch()
+    let dispatch = useDispatch();
     let gmHandler = () => {
         dispatch(gmAction())
     }
-    let gnHandler = () => {
-        dispatch(gnAction());
-    }
     return (
         <div>
-             <h1>Message Component:{y}</h1> 
-            {/* <pre>{JSON.stringify(y)}</pre>  */}
-            <button onChange={gmHandler()}>GM</button>
-            <button onChange={gnHandler()}>GN</button>
+            <h1>Message Example</h1>
+            <pre>{JSON.stringify(x)}</pre>
+            <button onClick={gmHandler}>GM</button> &nbsp;&nbsp;
+            <button onClick={() => { dispatch(gnAction()) }}>GN</button>
         </div>
     )
 }
