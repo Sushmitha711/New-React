@@ -1,12 +1,14 @@
 import React from 'react';
 import {useDispatch,useSelector} from 'react-redux'
-import { incrAction,decrAction } from '../redux2/Product/product.action';
+import { incr_Action,decr_Action } from '../redux2/Product/product.action';
 
 const Product = () => {
+
     let dispatch=useDispatch();
-let products=useSelector((state)=>{
+
+   let product=useSelector((state)=>{
     return state.product
-})
+   })
 
     return (
         
@@ -14,7 +16,7 @@ let products=useSelector((state)=>{
             <h1>PRODUCT EXAMPLE</h1>
             <div className='row'>
                 <div className='col-md-12'>
-                    <table className='table table-hover'>
+                 {   <table className='table table-hover'>
                         <thead className='bg-success text-white'>
                             <tr>
                                 <th>NAME</th>
@@ -26,14 +28,14 @@ let products=useSelector((state)=>{
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{products.P_Name}</td>
-                                 <td>{<img src={products.P_Image}/>}</td> 
-                                <td>{products.P_Price}</td>
-                                <td><i className='fa fa-plus-circle' onClick={()=>{dispatch(incrAction())}}></i>{products.P_Qty}<i className='fa fa-minus-circle' onClick={dispatch(decrAction())}></i></td>
-                                <td>{products.P_Qty*products.P_Price}</td>
+                                <td>{product.P_Name}</td>
+                                 <td>{<img src={product.P_Image} height="100px"/>}</td> 
+                                 <td>{product.P_Price}</td>
+                                 <td><i className='fa fa-plus-circle' onClick={()=>{dispatch(incr_Action())}}></i>{product.P_Qty}<i className='fa fa-minus-circle' onClick={  ()=>{ dispatch(decr_Action()) } }></i></td>
+                                <td>{product.P_Qty*product.P_Price}</td>  
                             </tr>
                         </tbody>
-                    </table>
+                    </table> }
                 </div>
             </div>
             

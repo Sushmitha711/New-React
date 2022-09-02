@@ -1,10 +1,10 @@
-let INCR="INCR"
-let DECR="DECR"
+let INCRS="INCRS"
+let DECRS="DECRS"
 
-let incrAction=()=>{
-    return {type:INCR}
+let incr_Action=()=>{
+    return {type:INCRS}
 }
-let decrAction=()=>{
-    return {type:DECR}
+let decr_Action=()=>{
+    return {type:DECRS}
 }
-export {INCR,DECR,incrAction,decrAction}
+export {INCRS,DECRS,incr_Action,decr_Action}
